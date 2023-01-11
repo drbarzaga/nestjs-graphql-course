@@ -61,4 +61,33 @@ Introduction to NestJs with GraphQL
   To test our first query in the GraphQL PlayGround you need open it in your browser on `http://localhost:3000/grapqhl`
   <img width="1726" alt="Screen Shot 2023-01-11 at 10 42 39" src="https://user-images.githubusercontent.com/12173976/211824917-653c2d96-418e-4d33-82fe-8e3803ead15f.png">
 
-   
+- Installing Apollo Studio
+
+    ```
+    $ yarn add apollo-server-core
+
+    $ npm install apollo-server-core
+    ```
+
+- Setup the Apollo Studio and disabling the Playground
+
+    ```ts
+    // app.module.ts
+    ... // Others imports
+    import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
+    
+
+    @Module({
+        imports: [
+            GraphQLModule.forRoot<ApolloDriverConfig>({
+                driver: ApolloDriver,
+                debug: true,
+                playground: false,
+                plugins: [
+                    ApolloServerPluginLandingPageLocalDefault
+                ]
+                autoSchemaFile: join(process.cwd(), 'src/schema.gql')
+            }),
+        ],
+    })
+    ```
