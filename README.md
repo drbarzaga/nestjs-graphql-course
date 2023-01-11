@@ -95,5 +95,5 @@ Introduction to NestJs with GraphQL
     
 - Go to `http://localhost:3000/graphql` to see the Apollo Studio
 
-<img width="1728" alt="image" src="https://user-images.githubusercontent.com/12173976/211831436-082e5a45-10ac-4127-8388-7ef8aa16e8be.png">
+  <img width="1728" alt="image" src="https://user-images.githubusercontent.com/12173976/211831436-082e5a45-10ac-4127-8388-7ef8aa16e8be.png">
 
