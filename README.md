@@ -1,15 +1,15 @@
-## Sessions of the NestJS + GraphQL
+# Sessions of the NestJS + GraphQL
 Contains the sessions of the Udemy course [NestJS + GraphQL](https://www.udemy.com/course/nest-graphql/) by [Fernando Herrera](https://www.udemy.com/user/550c38655ec11/)
 
 
 # Table of contents
-1. [Section 1](#Section-1)
-2. [Section 2](#Section-2)
+1. [Section 1](##Section-1)
+2. [Section 2](##Section-2)
 
-# Section-1
+## Section-1
 Introduction to NestJs, understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`.
 
-# Section-2
+## Section-2
 Introduction to NestJs with GraphQL
 
 - Installing GraphQL in NestJS.
@@ -59,6 +59,7 @@ Introduction to NestJs with GraphQL
 - Testing our first query in the `Playground`:
 
   To test our first query in the GraphQL PlayGround you need open it in your browser on `http://localhost:3000/grapqhl`
+  
   <img width="1726" alt="Screen Shot 2023-01-11 at 10 42 39" src="https://user-images.githubusercontent.com/12173976/211824917-653c2d96-418e-4d33-82fe-8e3803ead15f.png">
 
 - Installing Apollo Studio
@@ -91,3 +92,8 @@ Introduction to NestJs with GraphQL
         ],
     })
     ```
+    
+- Go to `http://localhost:3000/graphql` to see the Apollo Studio
+
+Screen Shot 2023-01-11 at 11.19.37<img width="1728" alt="image" src="https://user-images.githubusercontent.com/12173976/211831436-082e5a45-10ac-4127-8388-7ef8aa16e8be.png">
+
