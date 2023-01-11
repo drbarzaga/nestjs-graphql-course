@@ -6,4 +6,4 @@ Contains the sessions of the Udemy course [NestJS + GraphQL](https://www.udemy.c
 1. [Section-1](#Section-1)
 
 # Section-1
-Introduction to NestJs using REST Controllers, understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
+Introduction to NestJs, understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
