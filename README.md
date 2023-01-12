@@ -3,14 +3,15 @@ Contains the sessions of the Udemy course [NestJS + GraphQL](https://www.udemy.c
 
 
 # Table of contents
-1. [Section 1 Introduction to NestJs](##Section-1)
-2. [Section 2 Introduction to NestJs with GraphQL](##Section-2)
+1. [Section 1 Introduction to NestJs](#section-1-introduction-to-nestjs)
+2. [Section 2 Introduction to NestJs with GraphQL](#section-2-introduction-to-nestjs-with-graphql)
+3. [Section 3 GraphQL continue with the TODOs Example](#section-3-graphql-continue-with-the-todos-example)
 
 ## Section-1: Introduction to NestJs.
 
 Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`.
 
-## Section-2: Introduction to NestJs with GraphQL
+## Section-2: Introduction to NestJs with GraphQL.
 
 - Installing GraphQL in NestJS.
     ```
@@ -97,3 +98,9 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
 
   <img width="1728" alt="image" src="https://user-images.githubusercontent.com/12173976/211831436-082e5a45-10ac-4127-8388-7ef8aa16e8be.png">
 
+
+
+
+
+
+## Section-3: GraphQL continue with the TODOs example.
