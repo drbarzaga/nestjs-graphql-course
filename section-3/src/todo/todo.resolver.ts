@@ -1,6 +1,7 @@
-import { Query, Resolver, Mutation } from '@nestjs/graphql';
+import { Query, Resolver, Mutation, Args, Int } from '@nestjs/graphql';
 import { Todo } from './entity/todo.entity';
 import { TodoService } from './todo.service';
+import { NotFoundException } from '@nestjs/common';
 
 @Resolver()
 export class TodoResolver {
@@ -11,9 +12,11 @@ export class TodoResolver {
     return this.todoService.findAll();
   }
 
-  @Query(() => String)
-  findOne() {
-    // TODO
+  @Query(() => Todo)
+  findOne(
+    @Args('id', { type: () => Int }) id: number,
+  ): Todo | NotFoundException {
+    return this.todoService.findOne(id);
   }
 
   @Mutation(() => String)
