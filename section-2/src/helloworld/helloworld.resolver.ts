@@ -1,4 +1,3 @@
-import { ParseIntPipe } from '@nestjs/common';
 import { Resolver, Query, Float, Int, Args } from '@nestjs/graphql';
 
 @Resolver()
