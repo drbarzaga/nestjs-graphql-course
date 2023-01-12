@@ -1,4 +1,4 @@
-# Sessions of the NestJS + GraphQL
+# Session of the  NestJS + GraphQL Udemy Course
 Contains the sessions of the Udemy course [NestJS + GraphQL](https://www.udemy.com/course/nest-graphql/) by [Fernando Herrera](https://www.udemy.com/user/550c38655ec11/)
 
 
