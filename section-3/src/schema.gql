@@ -9,8 +9,9 @@ type Todo {
 }
 
 type Query {
-  findAll: [Todo!]!
+  findAll(status: Boolean): [Todo!]!
   findOne(id: Int!): Todo!
+  totalTodos: Int!
 }
 
 type Mutation {

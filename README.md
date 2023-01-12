@@ -105,7 +105,7 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
 
 ## Section-3: GraphQL continue with the TODOs example.
 
-- Learning more about `Resolvers`, `Entities`, `Services`, `Fragments`, `Validations`.
+- Learning more about `Resolvers`, `Entities`, `Services`, `Fragments`, `Validations`, `Filters`.
 
 - The `todo.service.ts` file contains methods below:
     ```ts

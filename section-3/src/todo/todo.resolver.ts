@@ -2,15 +2,15 @@ import { Query, Resolver, Mutation, Args, Int } from '@nestjs/graphql';
 import { Todo } from './entity/todo.entity';
 import { TodoService } from './todo.service';
 import { NotFoundException } from '@nestjs/common';
-import { CreateTodoInput, UpdateTodoInput } from './dto/input';
+import { CreateTodoInput, UpdateTodoInput, StatusArgs } from './dto';
 
 @Resolver(() => Todo)
 export class TodoResolver {
   constructor(private todoService: TodoService) {}
 
   @Query(() => [Todo])
-  findAll(): Todo[] {
-    return this.todoService.findAll();
+  findAll(@Args() statusArgs: StatusArgs): Todo[] {
+    return this.todoService.findAll(statusArgs);
   }
 
   @Query(() => Todo)
@@ -35,5 +35,11 @@ export class TodoResolver {
   @Mutation(() => Boolean)
   removeTodo(@Args('id', { type: () => Int }) id: number): boolean {
     return this.todoService.removeTodo(id);
+  }
+
+  // Aggregations
+  @Query(() => Int)
+  totalTodos(): number {
+    return this.todoService.totalTodos;
   }
 }
