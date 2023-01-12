@@ -115,7 +115,7 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
 
     createTodo(createTodoInput: CreateTodoInput): Todo // Create a new todo
 
-    updateTodo(id: number, updateTodoInput: UpdateTodoInput) // Update a todo
+    updateTodo(updateTodoInput: UpdateTodoInput) // Update a todo
 
     removeTodo(id: number) // Remove one todo by id
     ```

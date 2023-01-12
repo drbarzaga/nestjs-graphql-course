@@ -4,7 +4,7 @@ import { TodoService } from './todo.service';
 import { NotFoundException } from '@nestjs/common';
 import { CreateTodoInput, UpdateTodoInput } from './dto/input';
 
-@Resolver()
+@Resolver(() => Todo)
 export class TodoResolver {
   constructor(private todoService: TodoService) {}
 
@@ -32,8 +32,8 @@ export class TodoResolver {
     return this.todoService.updateTodo(updateTodoInput);
   }
 
-  @Mutation(() => String)
-  removeTodo() {
-    // TODO
+  @Mutation(() => Boolean)
+  removeTodo(@Args('id', { type: () => Int }) id: number): boolean {
+    return this.todoService.removeTodo(id);
   }
 }

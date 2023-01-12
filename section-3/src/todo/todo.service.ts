@@ -57,7 +57,11 @@ export class TodoService {
     return todoToUpdate;
   }
 
-  removeTodo() {
-    // TODO
+  removeTodo(id: number) {
+    const todo = this.findOne(id);
+    if (!todo) return false;
+
+    this.todos = this.todos.filter((item) => item.id !== (todo as Todo).id);
+    return true;
   }
 }
