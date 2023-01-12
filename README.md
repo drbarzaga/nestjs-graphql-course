@@ -105,7 +105,7 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
 
 ## Section-3: GraphQL continue with the TODOs example.
 
-- Creating `Resolvers`, `Entities`, `Services`.
+- Learning more about `Resolvers`, `Entities`, `Services`, `Fragments`, `Validations`.
 
 - The `todo.service.ts` file contains methods below:
     ```ts
@@ -113,9 +113,9 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
 
     findOne(id: number): Todo // Return a single todo by id
 
-    createTodo(description: string): Todo // Create a new todo
+    createTodo(createTodoInput: CreateTodoInput): Todo // Create a new todo
 
-    updateTodo(id: number, description?: string, done?: boolean) // Update a todo
+    updateTodo(id: number, updateTodoInput: UpdateTodoInput) // Update a todo
 
     removeTodo(id: number) // Remove one todo by id
     ```
