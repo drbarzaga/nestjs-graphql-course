@@ -8,10 +8,21 @@ type Todo {
   done: Boolean!
 }
 
+"""Todo quick aggregations"""
+type AggregationsType {
+  total: Int!
+  pending: Int!
+  completed: Int!
+  totalCompletedTotos: Int! @deprecated(reason: "Must use completed instead.")
+}
+
 type Query {
   findAll(status: Boolean): [Todo!]!
   findOne(id: Int!): Todo!
   totalTodos: Int!
+  pendingTodos: Int!
+  completedTodos: Int!
+  aggregations: AggregationsType!
 }
 
 type Mutation {
