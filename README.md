@@ -104,3 +104,5 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
 
 
 ## Section-3: GraphQL continue with the TODOs example.
+
+- Creating `Resolvers`, `Entities`, `Services` 
