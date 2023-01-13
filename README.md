@@ -125,7 +125,6 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
 
 - Connecting to Database using Docker, to do that we need create a file named `docker-compose.yaml` in the root of project
 
-   // docker-compose.yml
    ```yml
         version: '3'
 
