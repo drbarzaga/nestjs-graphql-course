@@ -142,13 +142,13 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
                 - ./postgres:/var/lib/postgresql/data
    ```
 
-   Run the docker container to connect to the database:
+- Run the docker container to connect to the database:
    
    ```
    $ docker-compose up -d
    ```
 
-   Setup the environment variables, copy the `.env.example` to `.env` and add the properly env variables there, it should look like this below:
+- Setup the environment variables, copy the `.env.example` to `.env` and add the properly env variables there, it should look like this below:
 
    ```env
    ENV = prod
@@ -163,3 +163,60 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
    #mailer
    ...
    ``` 
+
+- Using the module `ConfigModule` to have access to the environment variables in our project, we need install the module using the command below:
+
+   ```
+   $ yarn add @nestjs/config
+
+   $ npm install --save @nestjs/config
+   ```
+
+   Adding the `ConfigModule` in our `app.module.ts`
+
+   ```ts
+      // app.module.ts
+      import { ConfigModule } from '@nestjs/config'
+
+      @Module({
+        imports: [
+            ConfigModule.forRoot(),
+            ...
+        ],
+        ...
+      })
+   ``` 
+
+- We need install and setup `TypeORM` to work with `Postgres`
+
+    ```
+    $ yarn add @nestjs/typeorm typeorm pg
+
+    $ npm install --save @nestjs/typeorm typeorm pg
+    ```
+
+- Configure the `TypeOrmModule` inside the `app.module.ts` file using the environment variables defined in the `.env`, we need add the code below into the `imports` section of the `app.module.ts`
+
+    ```ts
+       import { TypeOrmModule } from '@nestjs/typeorm'
+        
+       // app.module.ts
+       @Module({
+          imports: [
+            ConfigModule.forRoot(),
+            ...
+            TypeOrmModule.forRoot({
+                type: 'postgres',
+                host: process.env.DB_HOST,
+                port: parseInt(process.env.DB_PORT, 10) || 5432,
+                username: process.env.DB_USERNAME,
+                password: process.env.DB_PASSWORD,
+                database: process.env.DB_NAME,
+                synchronize: true,
+                autoLoadEntities: true,
+            }),
+          ]
+       })
+
+     
+    ```
