@@ -147,3 +147,19 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
    ```
    $ docker-compose up -d
    ```
+
+   Setup the environment variables, copy the `.env.example` to `.env` and add the properly env variables there, it should look like this below:
+
+   ```env
+   ENV = prod
+
+   #database
+   DB_HOST=localhost
+   DB_USERNAME=db_username
+   DB_PASSWORD=db_password
+   DB_NAME=db_name
+   DB_PORT=5432
+
+   #mailer
+   ...
+   ``` 
