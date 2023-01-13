@@ -6,6 +6,7 @@ Contains the sessions of the Udemy course [NestJS + GraphQL](https://www.udemy.c
 1. [Section 1 Introduction to NestJs](#section-1-introduction-to-nestjs)
 2. [Section 2 Introduction to NestJs with GraphQL](#section-2-introduction-to-nestjs-with-graphql)
 3. [Section 3 GraphQL continue with the TODOs Example](#section-3-graphql-continue-with-the-todos-example)
+4. [Section 4 Postgres + GraphQL + TypeORM](#section-4-postgres--graphql--typeorm)
 
 ## Section-1: Introduction to NestJs.
 
@@ -119,3 +120,5 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
 
     removeTodo(id: number) // Remove one todo by id
     ```
+
+## Section-4: Postgres + GraphQL + TypeORM
