@@ -116,9 +116,35 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
 
     createTodo(createTodoInput: CreateTodoInput): Todo // Create a new todo
 
-    updateTodo(updateTodoInput: UpdateTodoInput) // Update a todo
+    updateTodo(updateTodoInput: UpdateTodoInput): Todo // Update a todo
 
-    removeTodo(id: number) // Remove one todo by id
+    removeTodo(id: number): boolean // Remove one todo by id
     ```
 
 ## Section-4: Postgres + GraphQL + TypeORM
+
+- Connecting to Database using Docker, to do that we need create a file named `docker-compose.yaml` in the root of project
+
+   // docker-compose.yml
+   ```yml
+        version: '3'
+
+        services:
+            db:
+                image: postgres:14.3
+                restart: always
+                ports:
+                - "5435:5432"
+                environment:
+                POSTGRES_PASSWORD: ${DB_PASSWORD}
+                POSTGRES_DB: ${DB_NAME}
+                container_name: anylistDB
+                volumes:
+                - ./postgres:/var/lib/postgresql/data
+   ```
+
+   Run the docker container to connect to the database:
+   
+   ```
+   $ docker-compose up -d
+   ```
