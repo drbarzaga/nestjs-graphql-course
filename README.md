@@ -195,7 +195,7 @@ Understanding basics concepts like, `Controllers`, `Services`, `Modules`, `DTOs`
     $ npm install --save @nestjs/typeorm typeorm pg
     ```
 
-- Configure the `TypeOrmModule` inside the `app.module.ts` file using the environment variables defined in the `.env`, we need add the code below into the `imports` section of the `app.module.ts`
+- Integrate the `TypeOrmModule` inside the `app.module.ts` file using the environment variables defined in the `.env`, we need add the code below into the `imports` section of the `app.module.ts`
 
     ```ts
        import { TypeOrmModule } from '@nestjs/typeorm'
